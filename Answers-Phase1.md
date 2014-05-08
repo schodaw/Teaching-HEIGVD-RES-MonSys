@@ -84,11 +84,12 @@ Linux ubuntu-14 3.13.0-24-generic #46-Ubuntu SMP Thu Apr 10 19:11:08 UTC 2014 x8
 # -- YOUR ANSWER TO QUESTION 3 --
 
 vagrant@ubuntu-14:~$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-heig/app-nodejs     latest              9ffb416f5ccc        6 minutes ago       398.9 MB
-heig/web-apache     latest              494486c31d23        9 minutes ago       411.9 MB
-heig/rp-nginx       latest              3173bf7c4d3a        12 minutes ago      637.9 MB
-dockerfile/ubuntu   latest              cbc81be8f75e        12 days ago         378.6 MB
+REPOSITORY          TAG                 IMAGE ID            CREATED              VIRTUAL SIZE
+heig/rp-nginx       latest              76fae8956706        About a minute ago   637.9 MB
+heig/app-nodejs     latest              24fd920a5954        18 minutes ago       398.9 MB
+heig/web-apache     latest              0ff77a2da53c        21 minutes ago       411.9 MB
+<none>              <none>              9fea7ad91b3b        25 minutes ago       637.9 MB
+dockerfile/ubuntu   latest              cbc81be8f75e        12 days ago          378.6 MB
 
 # -------------------------------
 ```
@@ -98,17 +99,20 @@ dockerfile/ubuntu   latest              cbc81be8f75e        12 days ago         
 
 vagrant@ubuntu-14:~$ docker ps
 CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS              PORTS                  NAMES
-6be881a5a753        heig/app-nodejs:latest   node /opt/server.js    8 minutes ago       Up 8 minutes        0.0.0.0:7070->80/tcp   app-node
-
-c67f7f0bbe32        heig/web-apache:latest   /usr/sbin/apache2ctl   8 minutes ago       Up 8 minutes        0.0.0.0:8082->80/tcp   web-node-2
-
-37458a8b3459        heig/web-apache:latest   /usr/sbin/apache2ctl   8 minutes ago       Up 8 minutes        0.0.0.0:8081->80/tcp   web-node-1
-
+e11aab4621e6        heig/app-nodejs:latest   node /opt/server.js    20 seconds ago      Up 19 seconds       0.0.0.0:7070->80/tcp   app-node
+450c696def8c        heig/web-apache:latest   /usr/sbin/apache2ctl   21 seconds ago      Up 20 seconds       0.0.0.0:8082->80/tcp   web-node-2
+f4266701936e        heig/web-apache:latest   /usr/sbin/apache2ctl   21 seconds ago      Up 20 seconds       0.0.0.0:8081->80/tcp   web-node-1
+58a6a03a64ab        heig/rp-nginx:latest     /opt/init.sh           22 seconds ago      Up 21 seconds       0.0.0.0:9090->80/tcp   rp-node
 # -------------------------------
 ```
 
 ```
 # -- YOUR ANSWER TO QUESTION 5 --
+
+app-node : 172.17.0.5
+web-node-2 : 172.17.0.4
+web-node-1 : 172.17.0.3
+rp-node : 172.17.0.2
 
 # -------------------------------
 ```
