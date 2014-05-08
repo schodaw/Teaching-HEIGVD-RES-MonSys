@@ -96,6 +96,14 @@ dockerfile/ubuntu   latest              cbc81be8f75e        12 days ago         
 ```
 # -- YOUR ANSWER TO QUESTION 4 --
 
+vagrant@ubuntu-14:~$ docker ps
+CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS              PORTS                  NAMES
+6be881a5a753        heig/app-nodejs:latest   node /opt/server.js    8 minutes ago       Up 8 minutes        0.0.0.0:7070->80/tcp   app-node
+
+c67f7f0bbe32        heig/web-apache:latest   /usr/sbin/apache2ctl   8 minutes ago       Up 8 minutes        0.0.0.0:8082->80/tcp   web-node-2
+
+37458a8b3459        heig/web-apache:latest   /usr/sbin/apache2ctl   8 minutes ago       Up 8 minutes        0.0.0.0:8081->80/tcp   web-node-1
+
 # -------------------------------
 ```
 
