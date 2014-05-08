@@ -12,7 +12,7 @@ we have followed.
 
 
 ```
-# -- QUESTION 1 --
+# -- YOUR ANSWER TO QUESTION 1 --
 
 La commande vagrant up a été lancée une fois puis nous avons du redémarrer et relancer la commande. Ci-dessous ne se trouve donc que le résultat de la 2ème commande.
 
@@ -67,7 +67,7 @@ Cleaning up Docker containers...
 ```
 
 ```
-# -- QUESTION 2 --
+# -- YOUR ANSWER TO QUESTION 2 --
 
 C:\Data\RES\GitHub\Teaching-HEIGVD-RES-MonSys\monsys-web-infra>vagrant ssh
 Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-24-generic x86_64)
@@ -82,6 +82,13 @@ Linux ubuntu-14 3.13.0-24-generic #46-Ubuntu SMP Thu Apr 10 19:11:08 UTC 2014 x8
 
 ```
 # -- YOUR ANSWER TO QUESTION 3 --
+
+vagrant@ubuntu-14:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+heig/app-nodejs     latest              9ffb416f5ccc        6 minutes ago       398.9 MB
+heig/web-apache     latest              494486c31d23        9 minutes ago       411.9 MB
+heig/rp-nginx       latest              3173bf7c4d3a        12 minutes ago      637.9 MB
+dockerfile/ubuntu   latest              cbc81be8f75e        12 days ago         378.6 MB
 
 # -------------------------------
 ```
