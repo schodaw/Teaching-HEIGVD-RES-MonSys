@@ -224,10 +224,25 @@ Connection closed by foreign host.
 # -- YOUR ANSWER TO QUESTION 8 --
 
 Which command did you type on the terminal to establish the connection?
+telnet 192.168.33.20 9090
 
 What HTTP request did you type and send?
+GET /ajax/resources/nodes HTTP/1.1
+Host: www.monsys.com
+
 
 What HTTP response did you get?
+HTTP/1.1 200 OK
+Server: nginx/1.6.0
+Date: Thu, 15 May 2014 07:46:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+
+fa
+[{"name":"P-001","description":"Epson Printer","currentLoadLevel":74.9551200773567},{"n
+HP Printer","currentLoadLevel":49.00161297991872}]
+0
 # -------------------------------
 ```
 
