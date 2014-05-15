@@ -121,30 +121,30 @@ rp-node : 172.17.0.2
 # -- YOUR ANSWER TO QUESTION 6 --
 
 Host (your laptop):
-- IP address: H.H.H.H
+- IP address: 10.192.80.253
 
 Virtual Machine run by Virtual Box
-- IP address: B.B.B.B
-- PAT: packets arriving on H.H.H.H:PH are forwarded to B.B.B.B:PB
+- IP address: 192.168.33.20
+- PAT: packets arriving on 10.192.80.253:8080 are forwarded to 192.168.33.20:9090
 
 Docker Bridge
-- IP address: DB.DB.DB.DB
-- PAT: packets arriving on DB.DB.DB.DB:PB1 are forwarded to C1.C1.C1.C1:PC1
-- PAT: packets arriving on DB.DB.DB.DB:PB2 are forwarded to C2.C2.C2.C2:PC2
-- PAT: packets arriving on DB.DB.DB.DB:PB3 are forwarded to C3.C3.C3.C3:PC3
-- PAT: packets arriving on DB.DB.DB.DB:PB4 are forwarded to C4.C4.C4.C4:PC4
+- IP address: 172.17.42.1
+- PAT: packets arriving on 172.17.42.1:7070 are forwarded to 172.17.0.5:80
+- PAT: packets arriving on 172.17.42.1:8082 are forwarded to 172.17.0.4:80
+- PAT: packets arriving on 172.17.42.1:8081 are forwarded to 172.17.0.3:80
+- PAT: packets arriving on 172.17.42.1:9090 are forwarded to 172.17.0.2:80
 
 Docker Container 1
-- IP address: C1.C1.C1.C1
+- IP address: 172.17.0.5
 
 Docker Container 2
-- IP address: C2.C2.C2.C2
+- IP address: 172.17.0.4
 
 Docker Container 3
-- IP address: C3.C3.C3.C3
+- IP address: 172.17.0.3
 
 Docker Container 4
-- IP address: C4.C4.C4.C4
+- IP address: 172.17.0.2
 
 # -------------------------------
 ```
@@ -153,6 +153,7 @@ Docker Container 4
 # -- YOUR ANSWER TO QUESTION 7 --
 
 Which command did you type on the terminal to establish the connection?
+
 
 What HTTP request did you type and send?
 
