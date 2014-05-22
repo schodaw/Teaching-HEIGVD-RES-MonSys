@@ -424,5 +424,140 @@ lesheet">
 # -------------------------------
 ```
 
+# -- YOUR ANSWER TO QUESTION 10 --
 
+What procedure did you follow to validate the configuration of 
+your complete infrastructure?
+Commandes utilisées : docker ps, telnet
+ouvrir la page http://live.clashofclasses.ch/ avec un browser
+ouvrir la page http://dashboard.clashofclasses.ch/ avec un browser
+
+Provide details and evidence (command results, etc.) that your 
+setup is correct.
+
+docker ps  :
+vagrant@ubuntu-14:~$ docker ps
+CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS
+        PORTS                  NAMES
+f17772d0108c        heig/web-clash:latest    /usr/sbin/apache2ctl   16 minutes ago      Up 16 minutes       0.0.0.0:8085->80/tcp   clash-node-3
+41dc595f19d4        heig/web-clash:latest    /usr/sbin/apache2ctl   16 minutes ago      Up 16 minutes       0.0.0.0:8084->80/tcp   clash-node-2
+9e40a74dfc67        heig/web-clash:latest    /usr/sbin/apache2ctl   16 minutes ago      Up 16 minutes       0.0.0.0:8083->80/tcp   clash-node-1
+cc924d7010c5        heig/app-nodejs:latest   node /opt/server.js    16 minutes ago      Up 16 minutes       0.0.0.0:7070->80/tcp   app-node
+6a484813e7cf        heig/web-apache:latest   /usr/sbin/apache2ctl   16 minutes ago      Up 16 minutes       0.0.0.0:8082->80/tcp   web-node-2
+11e5fa41b59d        heig/web-apache:latest   /usr/sbin/apache2ctl   16 minutes ago      Up 16 minutes       0.0.0.0:8081->80/tcp   web-node-1
+93612732559e        heig/rp-nginx:latest     /opt/init.sh           16 minutes ago      Up 16 minutes       0.0.0.0:80->80/tcp     rp-node
+
+telnet :
+C:\Users\admin>telnet live.clashofclasses.ch 80
+Trying 192.168.33.20...
+Connected to live.clashofclasses.ch.
+Escape character is '^]'.
+GET / HTTP/1.1
+Host: live.clashofclasses.ch
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.0
+Date: Thu, 22 May 2014 07:22:19 GMT
+Content-Type: text/html
+Content-Length: 2058
+Connection: keep-alive
+Last-Modified: Thu, 15 May 2014 07:08:35 GMT
+ETag: "80a-4f96af723a2c0"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="sty
+lesheet">
+    <title>Sticky Footer Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/live-bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/sticky-footer.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]
+-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Welcome To Clash of Classes!</h1>
+      </div>
+......
+
+C:\Users\admin>telnet dashboard.clashofclasses.ch 80
+Trying 192.168.33.20...
+Connected to dashboard.clashofclasses.ch.
+Escape character is '^]'.
+GET / HTTP/1.1
+Host: dashboard.clashofclasses.ch
+
+HTTP/1.1 200 OK
+Server: nginx/1.6.0
+Date: Thu, 22 May 2014 07:24:58 GMT
+Content-Type: text/html
+Content-Length: 2057
+Connection: keep-alive
+Last-Modified: Thu, 15 May 2014 07:08:35 GMT
+ETag: "809-4f96af723a2c0"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="sty
+lesheet">
+    <title>Sticky Footer Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/dashboard-bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/sticky-footer.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]
+-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Clash of Classes Dashboard</h1>
+      </div>
+.......
+# -------------------------------
 
